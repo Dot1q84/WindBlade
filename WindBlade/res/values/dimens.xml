@@ -1,0 +1,5 @@
+<resources>
+
+    <dimen name="crop_bar_height">56dp</dimen>
+
+</resources>

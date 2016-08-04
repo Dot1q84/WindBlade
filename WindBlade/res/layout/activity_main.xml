@@ -1,0 +1,53 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#f58332" >
+
+        <TextView
+            android:id="@+id/title_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="WindBlade"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/action_pick"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:padding="12dp"
+            android:textColor="#FFFFFF"
+            android:gravity="center"
+            android:layout_alignParentRight="true"
+            android:text="@string/action_select" 
+            android:textSize="17sp"/>
+        
+         <TextView
+            android:id="@+id/action_camera"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:padding="12dp"
+            android:textColor="#FFFFFF"
+            android:gravity="center"
+            android:layout_alignParentLeft="true"
+            android:text="@string/action_camera" 
+            android:textSize="17sp"/>
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/result_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#f2f2f2"
+        android:layout_below="@id/title"
+        android:scaleType="fitCenter"
+        android:src="@drawable/logo" />
+
+</RelativeLayout>

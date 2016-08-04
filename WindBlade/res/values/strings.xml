@@ -1,0 +1,12 @@
+<resources>
+
+    <string name="app_name">WindBlade</string>
+    <string name="crop_saving">正在保存照片…</string>
+    <string name="crop_wait">请等待…</string>
+    <string name="crop_pick_error">无效的图片</string>
+    <string name="crop_done">完成</string>
+    <string name="crop_cancel">取消</string>
+    <string name="crop_rotate">旋转</string>
+    <string name="action_select">选图</string>
+    <string name="action_camera">拍照</string>
+</resources>

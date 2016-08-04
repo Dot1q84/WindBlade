@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/pic.windblade"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F2F2F2" >
+
+    <!--
+         <pic.windblade.crop.CropImageView
+        android:id="@+id/crop_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/done_cancel_bar"
+        android:background="@drawable/crop__texture" />
+    -->
+
+    <RelativeLayout
+        android:id="@+id/done_cancel_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" >
+
+        <include layout="@layout/crop_layout_done_rotate" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/divider_above_bottombar"
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:layout_above="@id/done_cancel_bar"
+        android:background="#dfdfdf" />
+
+    <LinearLayout
+        android:id="@+id/llyt_aspect_mode"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/divider_above_bottombar"
+        android:background="#f2f2f2"
+        android:padding="10dp"
+        android:weightSum="6" >
+
+        <RelativeLayout
+            android:id="@+id/rl_aspect_unspecified"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" >
+
+            <ImageView
+                android:id="@+id/img_aspect_unspecified"
+                android:layout_width="30dp"
+                android:layout_height="24dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/ic_cut_unspecified_x" />
+
+            <TextView
+                android:id="@+id/tv_aspect_unspecified"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/img_aspect_unspecified"
+                android:layout_centerHorizontal="true"
+                android:text="无限制"
+                android:textColor="#333333"
+                android:textSize="12sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_aspect_oneone"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" >
+
+            <ImageView
+                android:id="@+id/img_aspect_oneone"
+                android:layout_width="30dp"
+                android:layout_height="24dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/ic_cut_oneone_x" />
+
+            <TextView
+                android:id="@+id/tv_aspect_oneone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/img_aspect_oneone"
+                android:layout_centerHorizontal="true"
+                android:text="1:1"
+                android:textColor="#333333"
+                android:textSize="12sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_aspect_threetwo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" >
+
+            <ImageView
+                android:id="@+id/img_aspect_threetwo"
+                android:layout_width="30dp"
+                android:layout_height="24dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/ic_cut_threetwo_x" />
+
+            <TextView
+                android:id="@+id/tv_aspect_threetwo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/img_aspect_threetwo"
+                android:layout_centerHorizontal="true"
+                android:text="3:2"
+                android:textColor="#333333"
+                android:textSize="12sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_aspect_fourthree"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" >
+
+            <ImageView
+                android:id="@+id/img_aspect_fourthree"
+                android:layout_width="30dp"
+                android:layout_height="24dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/ic_cut_fourthree_x" />
+
+            <TextView
+                android:id="@+id/tv_aspect_fourthree"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/img_aspect_fourthree"
+                android:layout_centerHorizontal="true"
+                android:text="4:3"
+                android:textColor="#333333"
+                android:textSize="12sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_aspect_sixteennine"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" >
+
+            <ImageView
+                android:id="@+id/img_aspect_sixteennine"
+                android:layout_width="30dp"
+                android:layout_height="24dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/ic_cut_sixteennine_x" />
+
+            <TextView
+                android:id="@+id/tv_aspect_sixteennine"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/img_aspect_sixteennine"
+                android:layout_centerHorizontal="true"
+                android:text="16:9"
+                android:textColor="#333333"
+                android:textSize="12sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_aspect_custom"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" >
+
+            <ImageView
+                android:id="@+id/img_aspect_custom"
+                android:layout_width="30dp"
+                android:layout_height="24dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/ic_cut_custom_x" />
+
+            <TextView
+                android:id="@+id/tv_aspect_custom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/img_aspect_custom"
+                android:layout_centerHorizontal="true"
+                android:text="自定义"
+                android:textColor="#333333"
+                android:textSize="12sp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_aspect_ratio"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/llyt_aspect_mode"
+        android:layout_centerHorizontal="true"
+        android:background="#F2F2F2"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="x*y"
+        android:textColor="#101010"
+        android:textSize="17sp" />
+
+    <pic.windblade.crop.CropImageView
+        android:id="@+id/crop_image"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@id/tv_aspect_ratio"
+        android:layout_margin="20dp"
+        android:background="#F2F2F2"
+        app:showCircle="true"
+        app:showHandles="changing"
+        app:showThirds="true" 
+        />
+
+</RelativeLayout>

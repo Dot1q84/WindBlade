@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_myview"
+    android:layout_width="280dp"
+    android:layout_height="fill_parent"
+    android:background="#00000000"
+    android:gravity="center_vertical|center_horizontal"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:background="#ffffff" >
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:ellipsize="end"
+            android:gravity="top"
+            android:padding="10dp"
+            android:text="title"
+            android:textSize="17sp"
+            android:textColor="#101010" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="#d9d9d9"
+            android:layout_below="@id/tv_title"
+            android:visibility="visible" />
+    </RelativeLayout>
+    <!-- 文字 -->
+
+    <RelativeLayout
+        android:id="@+id/relative_body"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:background="@drawable/dialog_white_bottom_bg" >
+
+        <RelativeLayout
+            android:id="@+id/rl_bg"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:adjustViewBounds="true"
+            android:padding="20dp" >
+
+            <TextView
+                android:id="@+id/tv_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:gravity="top"
+                android:text="内容"
+                android:textColor="#333333"
+                android:textSize="15sp" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/button_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rl_bg"
+            android:layout_centerHorizontal="true"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/dialog_btncancel"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_white_noborder_x"
+                android:text="取消"
+                android:textColor="#077DFF" />
+
+            <TextView
+                android:id="@+id/tv_btn_divider"
+                android:layout_width="1px"
+                android:layout_height="fill_parent"
+                android:background="#d9d9d9" />
+
+            <Button
+                android:id="@+id/dialog_btnconfirm"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_white_noborder_x"
+                android:text="确定"
+                android:textColor="#077DFF" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_above="@id/button_layout"
+            android:background="#d9d9d9" />
+        
+    </RelativeLayout>
+
+</LinearLayout>

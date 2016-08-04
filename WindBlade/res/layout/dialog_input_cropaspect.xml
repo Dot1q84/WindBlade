@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_myview"
+    android:layout_width="280dp"
+    android:layout_height="fill_parent"
+    android:background="#00000000"
+    android:gravity="center_vertical|center_horizontal"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:background="#ffffff" >
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:ellipsize="end"
+            android:gravity="top"
+            android:padding="10dp"
+            android:text="输入裁剪尺寸"
+            android:textColor="#999999" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:background="#d9d9d9"
+            android:visibility="gone" />
+    </RelativeLayout>
+    <!-- 文字 -->
+
+    <RelativeLayout
+        android:id="@+id/relative_body"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:background="@drawable/dialog_white_bottom_bg" >
+
+        <RelativeLayout
+            android:id="@+id/rl_bg"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:adjustViewBounds="true"
+            android:padding="20dp" >
+
+            <TextView
+                android:id="@+id/tv_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:gravity="top"
+                android:text="内容"
+                android:textColor="#8f8f8f"
+                android:textSize="18sp"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/llyt_aspect_input"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@+id/img_lock"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:id="@+id/rl_aspect_width"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" >
+
+                    <TextView
+                        android:id="@+id/tv_width_str"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:padding="10dp"
+                        android:text="宽" />
+
+                    <EditText
+                        android:id="@+id/edt_width"
+                        android:layout_width="fill_parent"
+                        android:layout_height="35dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_toRightOf="@id/tv_width_str"
+                        android:background="@null"
+                        android:inputType="number"
+                        android:maxLength="5"
+                        android:singleLine="true" />
+
+                    <ImageView
+                        android:layout_width="fill_parent"
+                        android:layout_height="1px"
+                        android:layout_alignLeft="@id/tv_width_str"
+                        android:layout_alignRight="@id/edt_width"
+                        android:layout_below="@id/edt_width"
+                        android:background="#bfbfbf" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_aspect_height"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp" >
+
+                    <TextView
+                        android:id="@+id/tv_height_str"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:padding="10dp"
+                        android:text="高" />
+
+                    <EditText
+                        android:id="@+id/edt_height"
+                        android:layout_width="fill_parent"
+                        android:layout_height="35dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_toRightOf="@id/tv_height_str"
+                        android:background="@null"
+                        android:inputType="number"
+                        android:maxLength="5"
+                        android:singleLine="true" />
+
+                    <ImageView
+                        android:layout_width="fill_parent"
+                        android:layout_height="1px"
+                        android:layout_alignLeft="@id/tv_height_str"
+                        android:layout_alignRight="@id/edt_height"
+                        android:layout_below="@id/edt_height"
+                        android:background="#bfbfbf" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <ImageView
+                android:id="@id/img_lock"
+                android:layout_width="14dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp"
+                android:src="@drawable/btn_lock_off" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/button_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rl_bg"
+            android:layout_centerHorizontal="true"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/dialog_btncancel"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_white_noborder_x"
+                android:text="取消"
+                android:textColor="#077DFF" />
+
+            <TextView
+                android:id="@+id/tv_btn_divider"
+                android:layout_width="1px"
+                android:layout_height="fill_parent"
+                android:background="#d9d9d9" />
+
+            <Button
+                android:id="@+id/dialog_btnconfirm"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_white_noborder_x"
+                android:text="确定"
+                android:textColor="#077DFF" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_above="@id/button_layout"
+            android:background="#d9d9d9" />
+    </RelativeLayout>
+
+</LinearLayout>
